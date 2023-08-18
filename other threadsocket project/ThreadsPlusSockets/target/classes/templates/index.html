@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test socket app</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.0/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <br>
+        <div>
+            <form>
+                <div>
+                    <label>Insert Data:</label><br>
+                    <label>Start ID</label>
+                    <input id="startID" name="startID" type="number"><br>
+                    <label>End ID</label>
+                    <input id="endID" name="endID" type="number"><br>
+                    <button type="submit" id="sendbutton">Send</button>
+                </div>
+            </form>
+            <button type="button" id="pause" disabled="disabled">Pause Connection</button><br>
+            <label>Status:</label><br>
+            <textarea name="postStatus" id="postStatus" cols="80" rows="10" disabled="disabled"></textarea>
+        </div>
+        <div>
+            <button id="deletebtn" type="button">Delete DB.</button>
+            <label>Status: <span id="dltstatus"></span></label>
+        </div>
+        <div>
+            <h4>Get Data:</h4>
+            <button type="button" id="getPokesbtn">Go</button><br>
+            <table width="600px">
+                <col style="width: 10%">
+                <col style="width: 40%">
+                <col style="width: 20%">
+                <col style="width: 30%">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Level</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody id="infoPokestbl"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

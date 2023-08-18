@@ -1,0 +1,21 @@
+spring:
+ application:
+  name: ThreadsPlusSockets
+ datasource:
+  driver-class-name: "com.mysql.cj.jdbc.Driver"
+  url: "jdbc:mysql://localhost:3306/pokemonlegacy"
+  username: root
+  password: I~992kqo
+ jpa: 
+  show-sql: true
+  defer-datasource-initialization: true
+  hibernate:
+   ddl-auto: none
+server:
+ port: 8080
+logging:
+ level:
+  org.springframework: DEBUG
+mvc:
+ async:
+  request-timeout: 600000
